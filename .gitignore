@@ -1,0 +1,2 @@
+﻿# Ignore Unity .meta files that make github look ugly >:(
+*.meta
