@@ -2,7 +2,7 @@
 A simple script setup to inherit and quickly start multithreading in Unity Engine.
 
 ## Installation
-Either clone this repo into your unity project or use the provided [UnityMultithreadingHandler.unitypackage](https://example.com)
+Either clone this repo into your unity project or use the provided [UnityMultithreadingHandler.unitypackage](https://github.com/rhedgeco/UnityMultithreadingHandler/releases)
 
 ## How to use
 Create a class that inherits from ThreadWorker.
