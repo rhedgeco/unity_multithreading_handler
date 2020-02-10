@@ -50,5 +50,5 @@ A ThreadDispatcher must be active in your unity scene. It will force itself into
 You may then call the thread dispatcher statically to start a ThreadWorker like this
 ```c#
 ExampleThreadWorker worker = new ExampleThreadWorker();
-ThreadDispatcher.Dispatcher.StartWorker(worker); // This will start the worker immediately
+ThreadDispatcher.StartWorker(worker); // This will start the worker immediately
 ```
