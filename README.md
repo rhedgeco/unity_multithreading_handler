@@ -5,7 +5,9 @@ A simple script setup to inherit and quickly start multithreading in Unity Engin
 Either clone this repo into your unity project or use the provided [UnityMultithreadingHandler.unitypackage](https://example.com)
 
 ## How to use
-Create a class that inherits from ThreadWorker
+Create a class that inherits from ThreadWorker.
+The work body is where all your off main thread processing will go.
+Use the provided callbacks to make updates happen on the main thread.
 ```c#
 using UnityMultithreading;
 
@@ -44,7 +46,9 @@ public class ExampleThreadWorker : ThreadWorker
     }
 }
 ```
-
-The work body is where all your off main thread processing will go.
-
-Use the provided callbacks to make updates happen on the main thread.
+A ThreadDispatcher must be active in your unity scene. It will force itself into a singleton.
+You may then call the thread dispatcher statically to start a ThreadWorker like this
+```c#
+ExampleThreadWorker worker = new ExampleThreadWorker();
+ThreadDispatcher.Dispatcher.StartWorker(worker); // This will start the worker immediately
+```
