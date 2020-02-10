@@ -49,6 +49,9 @@ public class ExampleThreadWorker : ThreadWorker
 A ThreadDispatcher must be active in your unity scene. It will force itself into a singleton.
 You may then call the thread dispatcher statically to start a ThreadWorker like this
 ```c#
+// Create it.
 ExampleThreadWorker worker = new ExampleThreadWorker();
+// Start it.
 ThreadDispatcher.StartWorker(worker); // This will start the worker immediately
+// Profit.
 ```
